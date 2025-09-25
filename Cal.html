@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#">
+        <input type="number" id="number">
+    </form>
+    <p id="Shows"></p>
+    <button onclick="showNum()">show type</button>
+    <button onclick="showNum2()">show number</button>
+    <button onclick="reset()">Reset</button>
+    <script src="index.js">
+
+    </script>
+    <script>
+        let Numb = 1;
+        function showNum() {
+            var show1 = ["A", "B", "C", "D", "E", "F", "G"];
+            let limited = show1.length - Numb;
+            if (show1.length >= Numb) {
+                alert(show1[limited]);
+                Numb++;
+            } else {
+
+                alert("Finished!");
+            }
+        }
+        function showNum2() {
+            alert(document.getElementById("number").value)
+        }
+        function reset() {
+            Numb = 1;
+        }
+    </script>
+
+    <hr>
+    <div id="cal">
+        <form action="#">
+            <input type="number" id="num1" placeholder="0">
+            <h4 id="Op">.</h4>
+            <input type="number" id="num2">
+            <h2 id="Print">Nothing.</h2>
+        </form>
+        <div id="button">
+            <button onclick="operator = 1;showOperator()">+</button>
+            <button onclick="operator = 2;showOperator()">-</button>
+            <button onclick="operator = 3;showOperator()">×</button>
+            <button onclick="operator = 4;showOperator()">÷</button>
+            <button onclick="useit()" id="Eq">=</button>
+            <button onclick="Cls()" id="Clear">C</button>
+        </div>
+
+        <script>
+            let operator = 0;
+            var Output = undefined;
+            let Num1 = undefined, Num2 = undefined;
+            var showOp = ["Empity", "+", "-", "×", "÷"];
+            function showOperator() {
+                let Op2 = document.getElementById("Op");
+                switch (operator) {
+                    case 1:
+                        Op2.innerHTML = showOp[1];
+                        break;
+                    case 2:
+                        Op2.innerHTML = showOp[2];
+                        break;
+                    case 3:
+                        Op2.innerHTML = showOp[3];
+                        break;
+                    case 4:
+                        Op2.innerHTML = showOp[4];
+                        break;
+                }
+            }
+            function useit() {
+                Num1 = Number(document.getElementById("num1").value);
+                Num2 = Number(document.getElementById("num2").value);
+                let Print = document.getElementById("Print");
+                if (!(Num1 == 0) || !(Num2 == 0)) {
+                    switch (operator) {
+                        case 1:
+                            Output = Num1 + Num2;
+                            Print.innerHTML = `${Num1} ${showOp[1]} ${Num2} = ${Output}`;
+                            break;
+                        case 2:
+                            Output = Num1 - Num2;
+                            Print.innerHTML = `${Num1} ${showOp[2]} ${Num2} = ${Output}`;
+                            break;
+                        case 3:
+                            Output = Num1 * Num2;
+                            Print.innerHTML = `${Num1} ${showOp[3]} ${Num2} = ${Output}`;
+                            break;
+                        case 4:
+                            Output = Num1 / Num2;
+                            Print.innerHTML = `${Num1} ${showOp[4]} ${Num2} = ${Output}`;
+                            break;
+                    }
+
+                } else {
+                    alert("please check input!");
+                }
+            }
+            function Cls() {
+                Num1 = document.getElementById("num1").value = "";
+                Num2 = document.getElementById("num2").value = "";
+            }
+        </script>
+    </div>
+    <div id="active">
+        <!--show date start and enfing time active sub with shape-->
+        <h1>Subscribe</h1>
+        <h1><span id="ShowName"></span></h1>
+        <h4>Active time : <span id="Ac"></span></h4>
+        <h4>Expire time : <span id="Ex"></span></h4>
+        <h3 id="leftTime"></h3>
+        <script>
+            let activate = document.getElementById("active");
+            let Ac = document.getElementById("Ac");
+            let Ex = document.getElementById("Ex");
+            let leftTime = document.getElementById("leftTime");
+            const setTime = new Date();
+            Ac.innerHTML = `${setTime.getFullYear()} / ${setTime.getMonth() + 1}`;
+            Ex.innerHTML = `${setTime.getFullYear()} / ${setTime.getMonth() + 4}`;
+            //leftTime.innerHTML = (setTime.getMonth() + 4) - (setTime.getMonth() + 1);
+
+            // seconds timer
+            let minutes = 0;
+            let seconds = 20;
+            let Name_type = "Shahin Faraji";
+            let LeftNum = 0;
+            let saveName = "";
+            let tagName = document.getElementById("ShowName");
+            let typeLegth = Name_type.length;
+            let LeftNum2 = typeLegth;
+            let LeftNum3 = 0;
+            window.setInterval(myTimer, 1000);
+            leftTime.innerHTML = `${minutes}:${seconds}`;
+            function myTimer() {
+                const d = new Date();
+                let BackSpace = false;
+                if (LeftNum < Name_type.length) {
+                    saveName += Name_type[LeftNum];
+                    tagName.innerHTML = saveName + "|" + LeftNum;
+                    LeftNum++;
+                }else{
+                saveName = "";
+                tagName.innerHTML = "";
+                if(LeftNum2 > 0){
+                    while (BackSpace == false) {
+                    saveName += Name_type[LeftNum3];
+                    LeftNum3++;
+                    if (LeftNum3 >= LeftNum2) {
+                        LeftNum2--;
+                        LeftNum3 = 0;
+                        BackSpace = true;
+                    }
+                }
+                tagName.innerHTML = saveName + "|" + LeftNum2;
+                }else{
+                    tagName.innerHTML = "Mission Complete!";
+                }
+                    
+                
+            }
+                
+
+                if (minutes == 0 && seconds == 0) {
+
+                } else {
+                    if (seconds <= 0) {
+                        minutes--;
+                        seconds = 59;
+                    } else {
+                        seconds--;
+                    }
+                }
+                if (seconds == 15) {
+                    activate.style.background = "#ffff00"
+                }
+                if (minutes == 0 && seconds == 0) {
+                    activate.style.background = "#ff0f00"
+                }
+                leftTime.innerHTML = `${minutes}:${seconds} ${d.toLocaleTimeString()}`;
+            }
+        </script>
+    </div>
+    <a href="index.html">Home</a>
+</body>
+
+</html>

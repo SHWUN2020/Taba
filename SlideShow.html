@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loop Slideshow Fixed</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #222;
+  }
+  .slideshow {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  .slides img {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+  }
+  .btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    padding: 8px 12px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .prev { left: 10px; }
+  .next { right: 10px; }
+</style>
+</head>
+<body>
+
+<div class="slideshow">
+  <button class="btn prev">&#10094;</button>
+  <div class="slides">
+    <img src="https://picsum.photos/id/1011/400/250" alt="Slide 1">
+    <img src="https://picsum.photos/id/1015/400/250" alt="Slide 2">
+    <img src="https://picsum.photos/id/1016/400/250" alt="Slide 3">
+  </div>
+  <button class="btn next">&#10095;</button>
+</div>
+
+<script>
+  const slides = document.querySelector('.slides');
+  const images = document.querySelectorAll('.slides img');
+  const totalSlides = images.length;
+  let index = 0;
+
+  function updateSlide() {
+    slides.style.transform = `translateX(-${index * 400}px)`;
+  }
+
+  document.querySelector('.next').addEventListener('click', () => {
+    index++;
+    if (index >= totalSlides) index = 0; // 
+    updateSlide();
+  });
+
+  document.querySelector('.prev').addEventListener('click', () => {
+    index--;
+    if (index < 0) index = totalSlides - 1; // 
+    updateSlide();
+  });
+</script>
+
+
+</body>
+</html>
