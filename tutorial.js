@@ -41,4 +41,99 @@ function Profile(name, age, education, bio, jender) {
 
 console.log(Profile("Shahin Faraji"));
 console.log("%cThe biggest lesson programming taught me was that if you " + "%cdon't fix the bugs, your program will never work!\n" + "%cI'm not talking about the program.","color:green;","color:red;","color:blue;background:white;");
+// End
 // -------------
+// Start 29 Sep 2025
+
+
+// var checkType = "Hello World";
+// alert(`"${checkType}" this type is ${typeof checkType}`);
+
+// checkType = 22;
+// alert(`"${checkType}" this type is ${typeof checkType}`);
+
+// checkType = true;
+// alert(`"${checkType}" this type is ${typeof checkType}`);
+
+// checkType = 2.44;
+// alert(`"${checkType}" this type is ${typeof checkType}`);
+
+// checkType = null;
+// alert(`"${checkType}" this type is ${typeof checkType}`);
+
+// checkType = undefined;
+// alert(`"${checkType}" this type is ${typeof checkType}`);
+
+// End
+
+// -------------
+
+// Start 30 Sep 2025
+
+//  function cal_sum(a, b){
+//     this.a = a;
+//     this.b = b;
+//     var c = a + b;
+//     console.log(c);
+//  }
+
+//  console.log(cal_sum(5, 5));
+
+ // End 
+
+ //------------
+
+ // Start 5 Oct 2025
+
+ const Arr = [
+    {id: 0, name: 'Shahin Faraji'},
+    {id: 1, name: 'Shahab Bozorgi'},
+    {id: 2, name: 'Benyamin Netaniaho'},
+    {id: 3, name: 'Yeganeh Molaei'}
+ ];
+
+ const newArr = Arr
+    .map(current => ({...current, isMan: true}))
+    .filter(current => current.name === 'Shahin Faraji')
+    .find(current => current.id === 0);
+
+console.log(newArr);
+
+
+const car = {
+    car_Name: 'Pegute',
+    car_Module: '206',
+    car_Color: 'red',
+    car_Year: 2025
+};
+
+
+console.log(car.car_Year);
+
+const academy = () => {
+    var name_Elevator = 'D', id_Elevator = 1;
+    console.log(name_Elevator + ' ' + id_Elevator);
+};
+
+
+
+console.log(academy());
+
+
+const fruits = new Map([
+    ['apple', 200],
+    ['banana', 300],
+    ['orange', 400]
+]);
+
+console.log(fruits.get('apple') + ' ' + typeof fruits);
+console.log(fruits.size);
+// fruits.clear();
+// console.log(fruits.size);
+
+
+let text = "";
+fruits.forEach (function(value, key) {
+    text += key + '=' + value + '\n';
+});
+console.log(text);

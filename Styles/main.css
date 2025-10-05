@@ -1,0 +1,33 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#table{
+    margin:50px 200px;
+    padding: 20px;
+    background: #ececec;
+    border:1px solid #000;
+}
+#table table{
+    margin: auto;
+}
+
+#table table,#table th,#table tr,#table td{
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+#table th{
+    padding: 20px;
+    width: 200px;
+    background: #cbddff;
+}
+#table td{
+    padding: 20px;
+    background: #fff;
+}

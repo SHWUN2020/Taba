@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="Styles/main.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body dir="rtl">
     <a href="Cal.html">Calculator</a>
-    
+    <h1 style="margin:50px auto; width: max-content;">
+        سیستم امتیاز دهی
+    </h1>
+    <div id="table">
+        <table>
+        <tr>
+            <th>ردیف</th>
+            <th>نام و نام خانوادگی</th>
+            <th>سمت اجرای</th>
+            <th>کد ملی</th>
+            <th>شماره دانشجویی</th>
+            <th>امتیاز مثبت</th>
+            <th>امتیاز منفی</th>
+        </tr>
+        <tr>
+            <td>test1</td>
+            <td>test2</td>
+            <td>test3</td>
+            <td>test4</td>
+            <td>test5</td>
+            <td>test6</td>
+            <td>test7</td>
+        </tr>
+    </table>
+    </div>
     <footer>
         <p>Copyright <span id="Year"></span> by Refsnes Data. All Rights Reserved. SHWUN is Powered by Taba Dot Community</p></footer>
-    <script>
-        const yearCopy = new Date();
-        document.getElementById("Year").innerHTML = yearCopy.getFullYear();
-    </script>
     <script src="tutorial.js"></script>
 </body>
 </html>
