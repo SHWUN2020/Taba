@@ -3,44 +3,44 @@
 // basic javascript
 // Start 26 Sep 2025
 
-console.log("Hello world");
+// console.log("Hello world");
 
-var firstName = "Shahin", lastName = "Faraji", age = 22, Lisence = true;
+// var firstName = "Shahin", lastName = "Faraji", age = 22, Lisence = true;
 
-if (Lisence == true && age >= 18) {
-    console.log(`Hey ${firstName} ${lastName} your account license is activated!`);
-} else {
-    console.log(` your age is low 18>${age}`);
-}
+// if (Lisence == true && age >= 18) {
+//     console.log(`Hey ${firstName} ${lastName} your account license is activated!`);
+// } else {
+//     console.log(` your age is low 18>${age}`);
+// }
 
-var num1 = 2, num2 = "2";
+// var num1 = 2, num2 = "2";
 
-console.log(`2 + 2 = ${num1 + num1}`);
-console.log(`2 + "2" = ${num1 + num2}`);
-console.log(`"2" + "2" = ${num2 + num2}`);
-console.log(`"2" - "2" = ${num2 - num2}`);
+// console.log(`2 + 2 = ${num1 + num1}`);
+// console.log(`2 + "2" = ${num1 + num2}`);
+// console.log(`"2" + "2" = ${num2 + num2}`);
+// console.log(`"2" - "2" = ${num2 - num2}`);
 
-var box = null;
-console.log(box);
+// var box = null;
+// console.log(box);
 
-function Profile(name, age, education, bio, jender) {
-    if (!(name == undefined) && !(age == undefined)) {
-        this.name = name;
-        this.age = age;
-        this.education = education;
-        this.bio = bio;
-        this.jender = jender;
-        let fullInfo = `My name is ${this.name} i'm ${this.age} years old\n and last license education is ${this.education}\n i can ${this.bio} and jendedr is ${this.jender}`;
-        console.log("System using info option is running...");
-        console.log(fullInfo);
-    }else{
-        console.log("You have dosen't not permissions! Check your data and fix.");
-    }
-    return;
-}
+// function Profile(name, age, education, bio, jender) {
+//     if (!(name == undefined) && !(age == undefined)) {
+//         this.name = name;
+//         this.age = age;
+//         this.education = education;
+//         this.bio = bio;
+//         this.jender = jender;
+//         let fullInfo = `My name is ${this.name} i'm ${this.age} years old\n and last license education is ${this.education}\n i can ${this.bio} and jendedr is ${this.jender}`;
+//         console.log("System using info option is running...");
+//         console.log(fullInfo);
+//     } else {
+//         console.log("You have dosen't not permissions! Check your data and fix.");
+//     }
+//     return;
+// }
 
-console.log(Profile("Shahin Faraji"));
-console.log("%cThe biggest lesson programming taught me was that if you " + "%cdon't fix the bugs, your program will never work!\n" + "%cI'm not talking about the program.","color:green;","color:red;","color:blue;background:white;");
+// console.log(Profile("Shahin Faraji"));
+// console.log("%cThe biggest lesson programming taught me was that if you " + "%cdon't fix the bugs, your program will never work!\n" + "%cI'm not talking about the program.", "color:green;", "color:red;", "color:blue;background:white;");
 // End
 // -------------
 // Start 29 Sep 2025
@@ -79,61 +79,123 @@ console.log("%cThe biggest lesson programming taught me was that if you " + "%cd
 
 //  console.log(cal_sum(5, 5));
 
- // End 
+// End 
 
- //------------
+//------------
 
- // Start 5 Oct 2025
+// Start 5 Oct 2025
 
- const Arr = [
-    {id: 0, name: 'Shahin Faraji'},
-    {id: 1, name: 'Shahab Bozorgi'},
-    {id: 2, name: 'Benyamin Netaniaho'},
-    {id: 3, name: 'Yeganeh Molaei'}
- ];
+// const Arr = [
+//     { id: 0, name: 'Shahin Faraji' },
+//     { id: 1, name: 'Shahab Bozorgi' },
+//     { id: 2, name: 'Benyamin Netaniaho' },
+//     { id: 3, name: 'Yeganeh Molaei' }
+// ];
 
- const newArr = Arr
-    .map(current => ({...current, isMan: true}))
-    .filter(current => current.name === 'Shahin Faraji')
-    .find(current => current.id === 0);
+// const newArr = Arr
+//     .map(current => ({ ...current, isMan: true }))
+//     .filter(current => current.name === 'Shahin Faraji')
+//     .find(current => current.id === 0);
 
-console.log(newArr);
-
-
-const car = {
-    car_Name: 'Pegute',
-    car_Module: '206',
-    car_Color: 'red',
-    car_Year: 2025
-};
+// console.log(newArr);
 
 
-console.log(car.car_Year);
-
-const academy = () => {
-    var name_Elevator = 'D', id_Elevator = 1;
-    console.log(name_Elevator + ' ' + id_Elevator);
-};
-
-
-
-console.log(academy());
+// const car = {
+//     car_Name: 'Pegute',
+//     car_Module: '206',
+//     car_Color: 'red',
+//     car_Year: 2025
+// };
 
 
-const fruits = new Map([
-    ['apple', 200],
-    ['banana', 300],
-    ['orange', 400]
-]);
+// console.log(car.car_Year);
 
-console.log(fruits.get('apple') + ' ' + typeof fruits);
-console.log(fruits.size);
-// fruits.clear();
+// const academy = () => {
+//     var name_Elevator = 'D', id_Elevator = 1;
+//     console.log(name_Elevator + ' ' + id_Elevator);
+// };
+
+
+
+// console.log(academy());
+
+
+// const fruits = new Map([
+//     ['apple', 200],
+//     ['banana', 300],
+//     ['orange', 400]
+// ]);
+
+// console.log(fruits.get('apple') + ' ' + typeof fruits);
 // console.log(fruits.size);
+// // fruits.clear();
+// // console.log(fruits.size);
 
 
-let text = "";
-fruits.forEach (function(value, key) {
-    text += key + '=' + value + '\n';
+// let text = "";
+// fruits.forEach(function (value, key) {
+//     text += key + '=' + value + '\n';
+// });
+// console.log(text);
+// fruits.delete('apple')
+// console.log('apple is ' + fruits.has('apple'));
+
+
+// End
+
+//---------------
+
+// Start 6 Oct 2025
+
+
+// text = "";
+// for (const x of fruits.entries()) {
+//     text += x + '\n';
+// }
+// console.log(text);
+// fruits.set('apple', 200);
+
+// text = "";
+// for (const x of fruits.entries()) {
+//     text += x + '\n';
+// }
+// console.log(text);
+
+// End 
+
+//---------------
+
+// Start 7 Oct 2025
+
+let Shahin = { name: 'Shahin faraji' },
+    Ali = { name: 'Ali Jafari' },
+    Farshid = { name: 'Farshid Jafari' };
+const userRole = new Map();
+
+userRole.set(Shahin, 'Admin')
+    .set(Ali, 'Membet')
+    .set(Farshid, 'Manager');
+
+
+// for(const [user, role] of userRole.entries()){
+//         console.log(`Username is ${user.name} and role is ${role}`);
+// }
+
+userRole.forEach((role, user) => {
+    console.log(`Username is ${user.name} and Role is ${role}`);
 });
-console.log(text);
+
+var keys = [...userRole.keys()];
+console.log(keys);
+
+var roles = [...userRole.values()];
+console.log(roles);
+
+let ran = '';
+for (let i = 1; i <= 6; i++) {
+    ran += Math.floor(Math.random() * 10);
+}
+console.log(`Your code verify is : ${ran}`);
+
+
+

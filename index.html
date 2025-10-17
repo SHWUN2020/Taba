@@ -11,6 +11,19 @@
     <h1 style="margin:50px auto; width: max-content;">
         سیستم امتیاز دهی
     </h1>
+    <input type="text" id="text" onkeypress="" oninput="minCharactor()" placeholder="Min 8 charactor">
+    <script>
+        const input = document.getElementById("text");
+        function minCharactor(){
+            var check = input.value.length;
+            console.log(check);
+            if(check <= 7){
+                input.style.background = "#ff0101";
+            }else{
+                input.style.background = "#fff";
+            }
+        }
+    </script>
     <div id="table">
         <table>
         <tr>
