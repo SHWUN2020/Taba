@@ -198,4 +198,57 @@ for (let i = 1; i <= 6; i++) {
 console.log(`Your code verify is : ${ran}`);
 
 
+// End
+
+//====================
+
+// Start 8 Oct 2025
+
+let myName = "Shahin Faraji"
+let pattern = myName.search(/h/i);
+console.log(pattern);
+
+// End
+// -------------------
+
+// Start 9 Oct 2025
+let pattern2 = myName.match(/Shahin/y);
+console.log(pattern2);
+
+
+let numChange = -10;
+
+if (numChange < 0) {
+    numChange *= -1;
+    console.log('Number has changed : ' + numChange);
+} else {
+    console.log('Number nothing change : ' + numChange);
+}
+
+let dataDay = new Date(), Wheek = 0;
+
+switch (dataDay.getDay() + 2) {
+    case 1:
+        console.log('Saturday');
+        break;
+    case 2:
+        console.log('Sunday');
+        break;
+    case 3:
+        console.log('Monday');
+        break;
+    case 4:
+        console.log('Tusday');
+        break;
+    case 5:
+        console.log('wensday');
+        break;
+    case 6:
+        console.log('tersday');
+        break;
+    case 7:
+        console.log('Saturday');
+        break;
+}
+
 
