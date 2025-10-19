@@ -149,27 +149,27 @@
                     saveName += Name_type[LeftNum];
                     tagName.innerHTML = saveName + "|" + LeftNum;
                     LeftNum++;
-                }else{
-                saveName = "";
-                tagName.innerHTML = "";
-                if(LeftNum2 > 0){
-                    while (BackSpace == false) {
-                    saveName += Name_type[LeftNum3];
-                    LeftNum3++;
-                    if (LeftNum3 >= LeftNum2) {
-                        LeftNum2--;
-                        LeftNum3 = 0;
-                        BackSpace = true;
+                } else {
+                    saveName = "";
+                    tagName.innerHTML = "";
+                    if (LeftNum2 > 0) {
+                        while (BackSpace == false) {
+                            saveName += Name_type[LeftNum3];
+                            LeftNum3++;
+                            if (LeftNum3 >= LeftNum2) {
+                                LeftNum2--;
+                                LeftNum3 = 0;
+                                BackSpace = true;
+                            }
+                        }
+                        tagName.innerHTML = saveName + "|" + LeftNum2;
+                    } else {
+                        tagName.innerHTML = "Mission Complete!";
                     }
+
+
                 }
-                tagName.innerHTML = saveName + "|" + LeftNum2;
-                }else{
-                    tagName.innerHTML = "Mission Complete!";
-                }
-                    
-                
-            }
-    
+
 
                 if (minutes == 0 && seconds == 0) {
 
